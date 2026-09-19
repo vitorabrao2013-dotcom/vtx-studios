@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VTX Studio — Web Design</title>
+<title>NOVYRA — Experiências Digitais</title>
 
-<meta name="description" content="VTX Studio — Sites modernos, rápidos e personalizados para negócios.">
+<meta name="description" content="NOVYRA — Criamos experiências digitais sofisticadas, estratégicas e memoráveis para marcas que querem se destacar.">
 
 <style>
 *{
@@ -22,8 +22,9 @@ html{
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#050505;
-    color:#fff;
-    line-height:1.5;
+    color:#f5f5f5;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
 a{
@@ -32,11 +33,11 @@ a{
 }
 
 .container{
-    width:min(1120px, 90%);
+    width:min(1180px,90%);
     margin:auto;
 }
 
-/* NAVBAR */
+/* HEADER */
 
 header{
     position:fixed;
@@ -44,33 +45,33 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(5,5,5,.75);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(5,5,5,.72);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav{
-    height:76px;
+    height:78px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:23px;
+    font-size:22px;
     font-weight:900;
-    letter-spacing:2px;
+    letter-spacing:5px;
 }
 
 .logo span{
-    color:#888;
+    color:#666;
 }
 
 .nav-links{
     display:flex;
-    gap:30px;
-    font-size:14px;
-    color:#aaa;
+    gap:32px;
+    color:#888;
+    font-size:13px;
 }
 
 .nav-links a{
@@ -87,7 +88,7 @@ header{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding-top:100px;
+    padding-top:110px;
     position:relative;
     overflow:hidden;
 }
@@ -95,182 +96,327 @@ header{
 .hero::before{
     content:"";
     position:absolute;
-    width:500px;
-    height:500px;
+    width:650px;
+    height:650px;
+    right:-260px;
+    top:5%;
     background:#fff;
-    opacity:.06;
+    opacity:.045;
+    filter:blur(150px);
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    left:-200px;
+    bottom:-100px;
+    background:#aaa;
+    opacity:.025;
     filter:blur(120px);
     border-radius:50%;
-    top:10%;
-    right:-150px;
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid #292929;
-    border-radius:30px;
-    color:#aaa;
-    font-size:12px;
-    margin-bottom:25px;
-    background:#0b0b0b;
-}
-
-.hero h1{
-    max-width:850px;
-    font-size:clamp(48px,8vw,92px);
-    line-height:.95;
-    letter-spacing:-5px;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 15px;
+    border:1px solid #242424;
+    border-radius:50px;
+    color:#999;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    background:#090909;
     margin-bottom:30px;
 }
 
-.hero h1 span{
-    color:#777;
+.badge::before{
+    content:"";
+    width:6px;
+    height:6px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 0 12px #fff;
 }
 
-.hero p{
-    max-width:620px;
-    color:#999;
-    font-size:18px;
+.hero h1{
+    max-width:1000px;
+    font-size:clamp(52px,9vw,112px);
+    line-height:.91;
+    letter-spacing:-7px;
     margin-bottom:35px;
 }
 
-.buttons{
+.hero h1 span{
+    display:block;
+    color:#555;
+}
+
+.hero p{
+    max-width:650px;
+    color:#888;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.hero-meta{
     display:flex;
-    gap:14px;
-    flex-wrap:wrap;
+    gap:35px;
+    color:#555;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.btn{
-    padding:15px 23px;
-    border-radius:10px;
-    font-weight:700;
-    font-size:14px;
-    transition:.3s;
-    display:inline-block;
-}
-
-.btn-primary{
-    background:#fff;
-    color:#000;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 35px rgba(255,255,255,.15);
-}
-
-.btn-secondary{
-    border:1px solid #292929;
-    color:#ddd;
-}
-
-.btn-secondary:hover{
-    border-color:#666;
+.hero-meta span{
+    color:#888;
 }
 
 /* SECTIONS */
 
 section{
-    padding:110px 0;
+    padding:130px 0;
 }
 
 .section-title{
-    margin-bottom:55px;
+    margin-bottom:60px;
 }
 
 .mini{
-    color:#777;
+    color:#666;
     text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    margin-bottom:14px;
+    letter-spacing:4px;
+    font-size:10px;
+    margin-bottom:16px;
 }
 
 .section-title h2{
-    font-size:clamp(34px,5vw,58px);
-    letter-spacing:-2px;
+    max-width:800px;
+    font-size:clamp(38px,6vw,72px);
+    line-height:1;
+    letter-spacing:-4px;
+}
+
+.section-title p{
+    max-width:600px;
+    color:#777;
+    margin-top:25px;
+    font-size:16px;
+}
+
+/* INTRO */
+
+.intro{
+    border-top:1px solid #171717;
+    border-bottom:1px solid #171717;
+}
+
+.intro-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+}
+
+.intro h3{
+    font-size:32px;
+    line-height:1.2;
+    letter-spacing:-1px;
+}
+
+.intro p{
+    color:#777;
+    font-size:16px;
+    line-height:1.9;
 }
 
 /* SERVICES */
 
-.grid{
+.services{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:1px;
+    background:#202020;
+    border:1px solid #202020;
 }
 
-.card{
-    padding:32px;
-    background:linear-gradient(145deg,#0c0c0c,#080808);
-    border:1px solid #191919;
-    border-radius:18px;
-    transition:.35s;
+.service{
+    background:#080808;
+    padding:45px;
+    min-height:300px;
+    transition:.4s;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#444;
+.service:hover{
+    background:#0d0d0d;
 }
 
-.number{
-    color:#555;
-    font-size:13px;
-    margin-bottom:35px;
+.service-number{
+    color:#444;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:70px;
 }
 
-.card h3{
-    font-size:24px;
-    margin-bottom:12px;
+.service h3{
+    font-size:27px;
+    margin-bottom:15px;
+    letter-spacing:-1px;
 }
 
-.card p{
-    color:#888;
-    font-size:15px;
+.service p{
+    color:#777;
+    font-size:14px;
+    max-width:450px;
+    line-height:1.8;
 }
 
-/* PROJECTS */
+/* CASES */
 
-.projects{
+.cases{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-.project{
-    min-height:280px;
-    border:1px solid #191919;
-    border-radius:18px;
-    padding:30px;
+.case{
+    min-height:430px;
+    padding:35px;
+    border:1px solid #1c1c1c;
+    border-radius:20px;
     position:relative;
     overflow:hidden;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
     background:
-        radial-gradient(circle at 80% 20%,#252525,transparent 35%),
-        linear-gradient(145deg,#111,#070707);
-    transition:.35s;
+        radial-gradient(circle at 75% 20%,#292929,transparent 28%),
+        linear-gradient(145deg,#121212,#070707);
+    transition:.45s;
 }
 
-.project:hover{
-    transform:scale(1.015);
+.case:hover{
+    transform:translateY(-8px);
     border-color:#444;
 }
 
-.project-tag{
-    color:#777;
-    font-size:11px;
+.case.large{
+    min-height:520px;
+}
+
+.case-tag{
+    color:#666;
+    font-size:10px;
     text-transform:uppercase;
-    letter-spacing:2px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.case h3{
+    font-size:42px;
+    letter-spacing:-2px;
+    margin-bottom:10px;
+}
+
+.case p{
+    max-width:430px;
+    color:#777;
+    font-size:14px;
+}
+
+/* NUMBERS */
+
+.numbers{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid #1b1b1b;
+    border-bottom:1px solid #1b1b1b;
+}
+
+.number-box{
+    padding:50px 30px;
+    border-right:1px solid #1b1b1b;
+}
+
+.number-box:last-child{
+    border-right:none;
+}
+
+.number-box strong{
+    display:block;
+    font-size:55px;
+    letter-spacing:-4px;
     margin-bottom:8px;
 }
 
-.project h3{
-    font-size:30px;
+.number-box span{
+    color:#666;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-/* NICHES */
+/* DIFERENCIAIS */
+
+.difference{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.diff{
+    padding:35px;
+    border:1px solid #191919;
+    border-radius:18px;
+    background:#080808;
+}
+
+.diff h3{
+    font-size:21px;
+    margin-bottom:15px;
+}
+
+.diff p{
+    color:#777;
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* PROCESSO */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.step{
+    border-top:1px solid #333;
+    padding-top:25px;
+}
+
+.step-number{
+    color:#555;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.step h3{
+    margin:25px 0 10px;
+    font-size:21px;
+}
+
+.step p{
+    color:#777;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* NICHE */
 
 .niches{
     display:flex;
@@ -279,12 +425,12 @@ section{
 }
 
 .niche{
-    border:1px solid #202020;
-    background:#0b0b0b;
-    padding:12px 17px;
-    border-radius:30px;
-    color:#aaa;
-    font-size:13px;
+    padding:13px 19px;
+    border:1px solid #222;
+    border-radius:50px;
+    background:#090909;
+    color:#888;
+    font-size:12px;
     transition:.3s;
 }
 
@@ -293,63 +439,47 @@ section{
     border-color:#555;
 }
 
-/* PROCESS */
-
-.process{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.step{
-    border-top:1px solid #333;
-    padding-top:20px;
-}
-
-.step strong{
-    font-size:14px;
-    color:#666;
-}
-
-.step h3{
-    margin:12px 0 8px;
-}
-
-.step p{
-    color:#777;
-    font-size:14px;
-}
-
-/* CTA */
+/* FINAL CTA */
 
 .cta{
     text-align:center;
-    border:1px solid #191919;
-    border-radius:24px;
-    padding:90px 25px;
+    border:1px solid #1d1d1d;
+    border-radius:28px;
+    padding:110px 30px;
     background:
-        radial-gradient(circle at center,#171717,transparent 55%),
+        radial-gradient(circle at center,#191919,transparent 58%),
         #080808;
 }
 
+.cta .mini{
+    margin-bottom:25px;
+}
+
 .cta h2{
-    font-size:clamp(40px,6vw,70px);
-    letter-spacing:-3px;
-    margin-bottom:18px;
+    max-width:850px;
+    margin:auto;
+    font-size:clamp(45px,7vw,85px);
+    line-height:.95;
+    letter-spacing:-5px;
+    margin-bottom:25px;
 }
 
 .cta p{
-    color:#888;
-    margin-bottom:30px;
+    max-width:570px;
+    margin:0 auto;
+    color:#777;
+    font-size:16px;
 }
 
 /* FOOTER */
 
 footer{
-    padding:35px 0;
+    padding:40px 0;
     border-top:1px solid #151515;
-    color:#666;
-    font-size:13px;
+    color:#555;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
 .footer-content{
@@ -358,12 +488,12 @@ footer{
     gap:20px;
 }
 
-/* ANIMAÇÃO */
+/* ANIMATION */
 
 .reveal{
     opacity:0;
-    transform:translateY(25px);
-    transition:opacity .8s ease, transform .8s ease;
+    transform:translateY(30px);
+    transition:opacity .9s ease, transform .9s ease;
 }
 
 .reveal.active{
@@ -373,10 +503,10 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:800px){
 
     .nav{
-        height:65px;
+        height:68px;
     }
 
     .nav-links{
@@ -388,20 +518,52 @@ footer{
     }
 
     .hero h1{
-        font-size:52px;
-        letter-spacing:-3px;
+        font-size:55px;
+        letter-spacing:-4px;
     }
 
     .hero p{
         font-size:16px;
     }
 
-    section{
-        padding:80px 0;
+    .hero-meta{
+        flex-direction:column;
+        gap:10px;
     }
 
-    .grid,
-    .projects{
+    section{
+        padding:90px 0;
+    }
+
+    .intro-content{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .services,
+    .cases{
+        grid-template-columns:1fr;
+    }
+
+    .case,
+    .case.large{
+        min-height:360px;
+    }
+
+    .numbers{
+        grid-template-columns:1fr;
+    }
+
+    .number-box{
+        border-right:none;
+        border-bottom:1px solid #1b1b1b;
+    }
+
+    .number-box:last-child{
+        border-bottom:none;
+    }
+
+    .difference{
         grid-template-columns:1fr;
     }
 
@@ -409,8 +571,8 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .project{
-        min-height:230px;
+    .cta{
+        padding:80px 20px;
     }
 
     .footer-content{
@@ -418,18 +580,28 @@ footer{
     }
 }
 
-@media(max-width:430px){
+@media(max-width:480px){
 
     .hero h1{
-        font-size:44px;
+        font-size:45px;
+        letter-spacing:-3px;
+    }
+
+    .section-title h2{
+        font-size:42px;
+        letter-spacing:-2px;
     }
 
     .process{
         grid-template-columns:1fr;
     }
 
-    .card{
-        padding:25px;
+    .service{
+        padding:30px;
+    }
+
+    .case h3{
+        font-size:34px;
     }
 }
 </style>
@@ -441,19 +613,18 @@ footer{
     <div class="container nav">
 
         <a href="#" class="logo">
-            VTX<span>STUDIO</span>
+            NOVYRA<span>®</span>
         </a>
 
         <nav class="nav-links">
+            <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
             <a href="#projetos">Projetos</a>
             <a href="#processo">Processo</a>
-            <a href="#contato">Contato</a>
         </nav>
 
     </div>
 </header>
-
 
 <main>
 
@@ -462,27 +633,57 @@ footer{
 <section class="hero">
     <div class="container">
 
-        <div class="badge">WEB DESIGN • DESENVOLVIMENTO</div>
+        <div class="badge">
+            Estúdio digital independente
+        </div>
 
         <h1>
-            Seu negócio merece
-            <span>um site à altura.</span>
+            Criamos experiências
+            <span>que fazem marcas serem lembradas.</span>
         </h1>
 
         <p>
-            Criamos sites modernos, rápidos e personalizados
-            para transformar a presença digital da sua marca.
+            A NOVYRA desenvolve sites sofisticados, rápidos e
+            estrategicamente pensados para empresas que entendem
+            que presença digital não é apenas estar na internet.
+            É criar uma impressão.
         </p>
 
-        <div class="buttons">
+        <div class="hero-meta">
+            <span>Estratégia</span>
+            •
+            <span>Design</span>
+            •
+            <span>Desenvolvimento</span>
+        </div>
 
-            <a href="#projetos" class="btn btn-primary">
-                Ver projetos
-            </a>
+    </div>
+</section>
 
-            <a href="#contato" class="btn btn-secondary">
-                Solicitar proposta
-            </a>
+
+<!-- SOBRE -->
+
+<section id="sobre" class="intro">
+    <div class="container">
+
+        <div class="intro-content reveal">
+
+            <h3>
+                Um bom site não precisa apenas
+                funcionar. Ele precisa transmitir
+                confiança antes mesmo da primeira conversa.
+            </h3>
+
+            <p>
+                Na NOVYRA, cada projeto começa entendendo a marca,
+                o público e o objetivo por trás do negócio.
+                A partir disso, transformamos ideias em experiências
+                digitais claras, elegantes e funcionais.
+                <br><br>
+                O resultado é uma presença online construída para
+                valorizar a empresa, apresentar seus diferenciais
+                e criar uma percepção mais profissional.
+            </p>
 
         </div>
 
@@ -497,48 +698,71 @@ footer{
 
         <div class="section-title reveal">
             <div class="mini">O que fazemos</div>
-            <h2>Sites pensados<br>para o seu negócio.</h2>
+
+            <h2>
+                Design com intenção.
+                Tecnologia com propósito.
+            </h2>
+
+            <p>
+                Do primeiro conceito à publicação, cuidamos dos
+                principais detalhes para transformar uma ideia
+                em uma experiência digital completa.
+            </p>
         </div>
 
-        <div class="grid">
+        <div class="services">
 
-            <div class="card reveal">
-                <div class="number">01</div>
-                <h3>Sites institucionais</h3>
+            <div class="service reveal">
+                <div class="service-number">01 / ESTRATÉGIA</div>
+
+                <h3>Posicionamento digital</h3>
+
                 <p>
-                    Apresente sua empresa, seus serviços,
-                    diferenciais e contatos de forma profissional.
+                    Organizamos as informações e objetivos do negócio
+                    para construir uma presença digital coerente,
+                    profissional e fácil de entender.
                 </p>
             </div>
 
-            <div class="card reveal">
-                <div class="number">02</div>
-                <h3>Landing Pages</h3>
+            <div class="service reveal">
+                <div class="service-number">02 / DESIGN</div>
+
+                <h3>Identidade visual na web</h3>
+
                 <p>
-                    Páginas focadas em apresentar uma oferta,
-                    serviço ou produto e gerar contatos.
+                    Criamos interfaces elegantes, modernas e
+                    alinhadas à personalidade da marca, valorizando
+                    cada detalhe da experiência.
                 </p>
             </div>
 
-            <div class="card reveal">
-                <div class="number">03</div>
-                <h3>Sites para negócios</h3>
+            <div class="service reveal">
+                <div class="service-number">03 / DESENVOLVIMENTO</div>
+
+                <h3>Sites personalizados</h3>
+
                 <p>
-                    Soluções personalizadas para empresas
-                    que querem fortalecer sua presença online.
+                    Desenvolvemos páginas responsivas, rápidas e
+                    estruturadas para funcionar bem em celulares,
+                    tablets e computadores.
                 </p>
             </div>
 
-            <div class="card reveal">
-                <div class="number">04</div>
-                <h3>Redesign</h3>
+            <div class="service reveal">
+                <div class="service-number">04 / EXPERIÊNCIA</div>
+
+                <h3>Conversão e clareza</h3>
+
                 <p>
-                    Modernizamos sites antigos para deixar
-                    sua marca mais atual, rápida e profissional.
+                    Organizamos conteúdos, chamadas e navegação para
+                    que o visitante encontre rapidamente aquilo que
+                    procura e entenda o valor da empresa.
                 </p>
             </div>
 
         </div>
+
     </div>
 </section>
 
@@ -549,30 +773,84 @@ footer{
     <div class="container">
 
         <div class="section-title reveal">
-            <div class="mini">Projetos</div>
-            <h2>Alguns conceitos.</h2>
+
+            <div class="mini">Projetos conceituais</div>
+
+            <h2>
+                Ideias transformadas
+                em experiências.
+            </h2>
+
+            <p>
+                Alguns conceitos desenvolvidos para diferentes
+                segmentos e necessidades digitais.
+            </p>
+
         </div>
 
-        <div class="projects">
+        <div class="cases">
 
-            <div class="project reveal">
-                <div class="project-tag">Academia</div>
-                <h3>Fitness</h3>
+            <div class="case large reveal">
+
+                <div class="case-tag">
+                    Saúde & Performance
+                </div>
+
+                <h3>Alto Performance</h3>
+
+                <p>
+                    Conceito de presença digital para uma marca
+                    voltada a performance, treinamento e bem-estar.
+                </p>
+
             </div>
 
-            <div class="project reveal">
-                <div class="project-tag">Barbearia</div>
-                <h3>Barber Shop</h3>
+
+            <div class="case reveal">
+
+                <div class="case-tag">
+                    Estilo & Serviços
+                </div>
+
+                <h3>Studio Barber</h3>
+
+                <p>
+                    Uma experiência sofisticada para uma barbearia
+                    que busca transmitir qualidade e personalidade.
+                </p>
+
             </div>
 
-            <div class="project reveal">
-                <div class="project-tag">Restaurante</div>
-                <h3>Gastronomia</h3>
+
+            <div class="case reveal">
+
+                <div class="case-tag">
+                    Gastronomia
+                </div>
+
+                <h3>Casa 27</h3>
+
+                <p>
+                    Conceito de site para restaurante com foco
+                    em atmosfera, cardápio e experiência.
+                </p>
+
             </div>
 
-            <div class="project reveal">
-                <div class="project-tag">Tecnologia</div>
-                <h3>Tech Company</h3>
+
+            <div class="case large reveal">
+
+                <div class="case-tag">
+                    Tecnologia
+                </div>
+
+                <h3>Nova Tech</h3>
+
+                <p>
+                    Interface conceitual para uma empresa de
+                    tecnologia com posicionamento moderno.
+                </p>
+
             </div>
 
         </div>
@@ -581,30 +859,27 @@ footer{
 </section>
 
 
-<!-- NICHOS -->
+<!-- NÚMEROS -->
 
 <section>
     <div class="container">
 
-        <div class="section-title reveal">
-            <div class="mini">Para quem</div>
-            <h2>Seu segmento.<br>Seu projeto.</h2>
-        </div>
+        <div class="numbers reveal">
 
-        <div class="niches reveal">
+            <div class="number-box">
+                <strong>100%</strong>
+                <span>Projetos personalizados</span>
+            </div>
 
-            <div class="niche">Academias</div>
-            <div class="niche">Barbearias</div>
-            <div class="niche">Restaurantes</div>
-            <div class="niche">Lojas</div>
-            <div class="niche">Clínicas</div>
-            <div class="niche">Imobiliárias</div>
-            <div class="niche">Escritórios</div>
-            <div class="niche">Tecnologia</div>
-            <div class="niche">Eventos</div>
-            <div class="niche">Autônomos</div>
-            <div class="niche">Serviços</div>
-            <div class="niche">E-commerce</div>
+            <div class="number-box">
+                <strong>01</strong>
+                <span>Experiência pensada para cada marca</span>
+            </div>
+
+            <div class="number-box">
+                <strong>∞</strong>
+                <span>Possibilidades para criar</span>
+            </div>
 
         </div>
 
@@ -618,42 +893,91 @@ footer{
     <div class="container">
 
         <div class="section-title reveal">
-            <div class="mini">Diferenciais</div>
-            <h2>Não é só um site.</h2>
+
+            <div class="mini">Nossa abordagem</div>
+
+            <h2>
+                Detalhes que mudam
+                a percepção.
+            </h2>
+
         </div>
 
-        <div class="grid">
+        <div class="difference">
 
-            <div class="card reveal">
-                <h3>Design personalizado</h3>
+            <div class="diff reveal">
+
+                <h3>Clareza</h3>
+
                 <p>
-                    Cada projeto é pensado de acordo com
-                    a identidade e os objetivos do negócio.
+                    Um visitante não deveria precisar procurar
+                    durante minutos para entender o que uma empresa
+                    oferece. Informação clara gera confiança.
                 </p>
+
             </div>
 
-            <div class="card reveal">
-                <h3>100% responsivo</h3>
+
+            <div class="diff reveal">
+
+                <h3>Estética</h3>
+
                 <p>
-                    Seu site adaptado para celular,
-                    tablet e computador.
+                    Tipografia, espaçamento, composição e hierarquia
+                    visual trabalham juntos para construir uma
+                    experiência sofisticada.
                 </p>
+
             </div>
 
-            <div class="card reveal">
-                <h3>Visual moderno</h3>
+
+            <div class="diff reveal">
+
+                <h3>Performance</h3>
+
                 <p>
-                    Interfaces limpas, profissionais
-                    e alinhadas com o posicionamento da marca.
+                    Um site bonito também precisa ser rápido,
+                    responsivo e confortável de navegar em
+                    diferentes dispositivos.
                 </p>
+
             </div>
 
-            <div class="card reveal">
-                <h3>Integrações</h3>
+
+            <div class="diff reveal">
+
+                <h3>Personalidade</h3>
+
                 <p>
-                    WhatsApp, Instagram, mapas,
-                    formulários e outras ferramentas.
+                    Evitamos soluções genéricas. A identidade do
+                    negócio deve aparecer nos detalhes e diferenciar
+                    a experiência.
                 </p>
+
+            </div>
+
+
+            <div class="diff reveal">
+
+                <h3>Responsividade</h3>
+
+                <p>
+                    Cada página é pensada para se adaptar a telas
+                    pequenas e grandes sem perder qualidade visual.
+                </p>
+
+            </div>
+
+
+            <div class="diff reveal">
+
+                <h3>Visão de longo prazo</h3>
+
+                <p>
+                    O objetivo é criar uma base digital que possa
+                    evoluir junto com a empresa e suas próximas fases.
+                </p>
+
             </div>
 
         </div>
@@ -668,46 +992,76 @@ footer{
     <div class="container">
 
         <div class="section-title reveal">
+
             <div class="mini">Processo</div>
-            <h2>Do primeiro contato<br>ao site publicado.</h2>
+
+            <h2>
+                Uma ideia.
+                Quatro etapas.
+            </h2>
+
+            <p>
+                Um processo simples e organizado para transformar
+                uma necessidade em uma experiência digital.
+            </p>
+
         </div>
 
         <div class="process">
 
             <div class="step reveal">
-                <strong>01</strong>
-                <h3>Conversa</h3>
+
+                <div class="step-number">01</div>
+
+                <h3>Descoberta</h3>
+
                 <p>
-                    Entendemos sua empresa,
-                    objetivos e necessidades.
+                    Entendemos a empresa, o público, os objetivos
+                    e aquilo que torna a marca diferente.
                 </p>
+
             </div>
 
-            <div class="step reveal">
-                <strong>02</strong>
-                <h3>Proposta</h3>
-                <p>
-                    Criamos uma proposta
-                    personalizada para o projeto.
-                </p>
-            </div>
 
             <div class="step reveal">
-                <strong>03</strong>
-                <h3>Criação</h3>
+
+                <div class="step-number">02</div>
+
+                <h3>Estratégia</h3>
+
                 <p>
-                    Desenvolvemos o design
-                    e a estrutura do site.
+                    Organizamos a estrutura, conteúdo e direção
+                    visual que irão guiar o projeto.
                 </p>
+
             </div>
 
+
             <div class="step reveal">
-                <strong>04</strong>
-                <h3>Publicação</h3>
+
+                <div class="step-number">03</div>
+
+                <h3>Construção</h3>
+
                 <p>
-                    O projeto é preparado
-                    para entrar no ar.
+                    Transformamos o conceito em uma interface
+                    funcional, responsiva e cuidadosamente construída.
                 </p>
+
+            </div>
+
+
+            <div class="step reveal">
+
+                <div class="step-number">04</div>
+
+                <h3>Entrega</h3>
+
+                <p>
+                    Depois dos ajustes finais, o projeto é preparado
+                    para publicação e apresentação ao público.
+                </p>
+
             </div>
 
         </div>
@@ -716,30 +1070,63 @@ footer{
 </section>
 
 
-<!-- CONTATO -->
+<!-- NICHOS -->
 
-<section id="contato">
+<section>
+    <div class="container">
+
+        <div class="section-title reveal">
+
+            <div class="mini">Segmentos</div>
+
+            <h2>
+                Diferentes negócios.
+                A mesma atenção aos detalhes.
+            </h2>
+
+        </div>
+
+        <div class="niches reveal">
+
+            <div class="niche">Academias</div>
+            <div class="niche">Barbearias</div>
+            <div class="niche">Restaurantes</div>
+            <div class="niche">Clínicas</div>
+            <div class="niche">Lojas</div>
+            <div class="niche">Imobiliárias</div>
+            <div class="niche">Escritórios</div>
+            <div class="niche">Tecnologia</div>
+            <div class="niche">Eventos</div>
+            <div class="niche">Profissionais autônomos</div>
+            <div class="niche">Serviços</div>
+            <div class="niche">Marcas digitais</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+
+<section>
     <div class="container">
 
         <div class="cta reveal">
 
-            <div class="mini">Vamos conversar?</div>
+            <div class="mini">
+                NOVYRA / ESTÚDIO DIGITAL
+            </div>
 
-            <h2>Vamos criar algo grande?</h2>
+            <h2>
+                Sua próxima presença digital começa aqui.
+            </h2>
 
             <p>
-                Conte um pouco sobre seu negócio
-                e solicite uma proposta personalizada.
+                Grandes experiências começam com uma boa ideia.
+                A NOVYRA existe para transformar essa ideia em
+                algo que as pessoas possam ver, usar e lembrar.
             </p>
-
-            <!-- TROQUE SEU_USUARIO PELO SEU INSTAGRAM -->
-
-            <a
-                href="https://instagram./vtx.studios1"
-                target="_blank"
-                class="btn btn-primary">
-                Chamar no Instagram
-            </a>
 
         </div>
 
@@ -750,17 +1137,19 @@ footer{
 
 
 <footer>
+
     <div class="container footer-content">
 
         <div>
-            © 2026 VTX Studio
+            © 2026 NOVYRA
         </div>
 
         <div>
-            Web Design • Desenvolvimento
+            Estratégia • Design • Desenvolvimento
         </div>
 
     </div>
+
 </footer>
 
 
@@ -774,9 +1163,7 @@ const observer = new IntersectionObserver(
         entries.forEach(entry => {
 
             if(entry.isIntersecting){
-
                 entry.target.classList.add("active");
-
             }
 
         });
